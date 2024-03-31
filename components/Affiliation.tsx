@@ -28,7 +28,7 @@ const Affiliation = () => {
     </p>
     <div className="relative sm:w-1/5 md:w-1/5 lg:w-1/5">
         <div className="mx-auto">
-          <img src="affiliation.png" alt="Affiliation" className="img-affiliation w-full" />
+          <img src="Affiliation.png" alt="Affiliation" className="img-affiliation w-full" />
           {/* Ajouter le lien de téléchargement */}
             <div className="absolute bottom-0 left-0 w-full bg-gray-700 bg-opacity-80 flex items-center justify-between px-4 text-white cursor-pointer">
             <span className="underline text-white-10" onClick={handleDownloadClick}>
