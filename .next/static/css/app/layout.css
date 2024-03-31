@@ -1566,8 +1566,8 @@ label {
 
 @media (min-width: 640px){
 
-  .sm\:flex{
-    display: flex;
+  .sm\:hidden{
+    display: none;
   }
 
   .sm\:w-1\/5{
@@ -1589,10 +1589,6 @@ label {
 
   .md\:block{
     display: block;
-  }
-
-  .md\:flex{
-    display: flex;
   }
 
   .md\:hidden{
