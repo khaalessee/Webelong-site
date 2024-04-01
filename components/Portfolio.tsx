@@ -31,7 +31,16 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
 
   useEffect(() => {
     const handleTouchMove = (event: TouchEvent) => {
-      event.preventDefault();
+      const modalContentElement = modalContentRef.current;
+      if (modalContentElement) {
+        if (modalContentElement.scrollHeight > modalContentElement.clientHeight) {
+          // Contenu de la modale plus grand que la taille de la modale, autoriser le défilement
+          return;
+        } else {
+          // Empêcher le défilement par défaut si le contenu n'a pas besoin de défilement
+          event.preventDefault();
+        }
+      }
     };
 
     const modalContentElement = modalContentRef.current;
