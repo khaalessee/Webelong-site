@@ -53,17 +53,17 @@ const Footer = () => {
 
   return (
     <footer className="bg-purple-10 relative">
-      <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="100%" // Couvre 100% de la largeur de la page
-    height="338" // Hauteur fixe
-    viewBox="0 0 1920 338" // Vue en fonction de la taille originale du SVG
->
+      <svg     
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        height="auto"
+        width="115%"
+        style={svgStyle}
+        viewBox="0 0 1920 338"
+        className="left-0 z-20 w-120% md:w-120% lg:w-120%"> // Position absolue pour couvrir toute la largeur de la page
+          
+        
   <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectangle_110" data-name="Rectangle 110" width="1920" height="338" transform="translate(0 11234)" fill="#fff" stroke="#707070" stroke-width="1"/>
-    </clipPath>
     <linearGradient id="linear-gradient" x1="0.923" y1="-0.102" x2="0.082" y2="0.141" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#d4b6d3"/>
       <stop offset="1" stop-color="#d4b6d3"/>
@@ -86,16 +86,15 @@ const Footer = () => {
       <stop offset="1" stop-color="#f2ebef"/>
     </linearGradient>
   </defs>
-  <g id="Groupe_de_masques_3" data-name="Groupe de masques 3" transform="translate(0 -11234)" clip-path="url(#clip-path)">
-    <g id="Groupe_28" data-name="Groupe 28" transform="translate(-88.054 10773.881)">
-      <path id="Tracé_2" data-name="Tracé 2" d="M-38.489,261.4s54.337-66.55,292.061-48.5,482.24,102.646,636.195,111.669,423.375-2.256,692.8-63.167,321.493-67.678,436.959-58.655S2130.46,324.569,2130.46,324.569s-206.027-19.176-348.662,30.455-683.74,108.285-860.335,85.726S369.038,323.441,230.932,331.337s-269.421,28.2-269.421,28.2Z" transform="translate(0 275.956)" fill="url(#linear-gradient)"/>
-      <path id="Tracé_3" data-name="Tracé 3" d="M-38.489,249.728s52.073-35.8,289.8-17.752,484.5,71.895,638.459,80.919,421.111-38.056,690.532-98.966,323.757-31.879,439.223-22.855S2130.46,312.894,2130.46,312.894s-206.027-19.176-348.662,30.455-683.74,108.285-860.335,85.726S369.038,311.766,230.932,319.662s-269.421,28.2-269.421,28.2Z" transform="translate(0 308.767)" fill="url(#linear-gradient-2)"/>
-      <path id="Tracé_4" data-name="Tracé 4" d="M-38.489,261.4s54.337-66.55,292.061-48.5,482.24,102.646,636.195,111.669,423.375-2.256,692.8-63.167,321.493-67.678,436.959-58.655S2130.46,324.569,2130.46,324.569s-206.027-19.176-348.662,30.455-683.74,108.285-860.335,85.726S369.038,323.441,230.932,331.337s-269.421,28.2-269.421,28.2Z" transform="translate(-14 335.654)" fill="url(#linear-gradient-3)"/>
-      <path id="Tracé_5" data-name="Tracé 5" d="M-38.489,263.722s52.073-35.8,289.8-17.752S738.077,330.386,882.975,350.69s332.814,23.687,602.234-37.223,418.847-117.423,534.313-108.4S2130.46,326.889,2130.46,326.889s-206.027-19.176-348.662,30.455S1098.059,465.63,921.464,443.07,369.038,325.761,230.932,333.657s-269.421,28.2-269.421,28.2Z" transform="translate(18.112 333.334)" fill="url(#linear-gradient-4)"/>
-      <path id="Tracé_6" data-name="Tracé 6" d="M-38.489,233.525s54.337-36.583,292.061-26.662,482.24,56.425,636.195,61.386,423.375-1.24,692.8-34.723,321.493-37.2,436.959-32.243,110.938,66.966,110.938,66.966S1924.433,257.707,1781.8,284.99s-683.74,59.526-860.335,47.124-552.425-64.486-690.532-60.146-269.421,15.5-269.421,15.5Z" transform="translate(0 458.77)" fill="url(#linear-gradient-5)"/>
-    </g>
+  <g id="Groupe_28" data-name="Groupe 28" transform="translate(52.489 -475.448)">
+    <path id="Tracé_2" data-name="Tracé 2" d="M-38.489,261.4s54.337-66.55,292.061-48.5,482.24,102.646,636.195,111.669,423.375-2.256,692.8-63.167,321.493-67.678,436.959-58.655S2130.46,324.569,2130.46,324.569s-206.027-19.176-348.662,30.455-683.74,108.285-860.335,85.726S369.038,323.441,230.932,331.337s-269.421,28.2-269.421,28.2Z" transform="translate(0 275.956)" fill="url(#linear-gradient)"/>
+    <path id="Tracé_3" data-name="Tracé 3" d="M-38.489,249.728s52.073-35.8,289.8-17.752,484.5,71.895,638.459,80.919,421.111-38.056,690.532-98.966,323.757-31.879,439.223-22.855S2130.46,312.894,2130.46,312.894s-206.027-19.176-348.662,30.455-683.74,108.285-860.335,85.726S369.038,311.766,230.932,319.662s-269.421,28.2-269.421,28.2Z" transform="translate(0 308.767)" fill="url(#linear-gradient-2)"/>
+    <path id="Tracé_4" data-name="Tracé 4" d="M-38.489,261.4s54.337-66.55,292.061-48.5,482.24,102.646,636.195,111.669,423.375-2.256,692.8-63.167,321.493-67.678,436.959-58.655S2130.46,324.569,2130.46,324.569s-206.027-19.176-348.662,30.455-683.74,108.285-860.335,85.726S369.038,323.441,230.932,331.337s-269.421,28.2-269.421,28.2Z" transform="translate(-14 335.654)" fill="url(#linear-gradient-3)"/>
+    <path id="Tracé_5" data-name="Tracé 5" d="M-38.489,263.722s52.073-35.8,289.8-17.752S738.077,330.386,882.975,350.69s332.814,23.687,602.234-37.223,418.847-117.423,534.313-108.4S2130.46,326.889,2130.46,326.889s-206.027-19.176-348.662,30.455S1098.059,465.63,921.464,443.07,369.038,325.761,230.932,333.657s-269.421,28.2-269.421,28.2Z" transform="translate(18.112 333.334)" fill="url(#linear-gradient-4)"/>
+    <path id="Tracé_6" data-name="Tracé 6" d="M-38.489,233.525s54.337-36.583,292.061-26.662,482.24,56.425,636.195,61.386,423.375-1.24,692.8-34.723,321.493-37.2,436.959-32.243,110.938,66.966,110.938,66.966S1924.433,257.707,1781.8,284.99s-683.74,59.526-860.335,47.124-552.425-64.486-690.532-60.146-269.421,15.5-269.421,15.5Z" transform="translate(0 458.77)" fill="url(#linear-gradient-5)"/>
   </g>
 </svg>
+
 
 <div className="bg-purple-10 pb-10 relative text-white text-center lg:flex lg:justify-center lg:mt-[-130px]">
 <div className="flex flex-col items-center lg:flex-row">

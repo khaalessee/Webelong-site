@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Flickity from 'react-flickity-component';
 import 'flickity/css/flickity.css';
+
 
 // Interface pour spécifier le type de données pour chaque diapositive
 interface Slide {
@@ -26,11 +27,29 @@ const flickityOptions = {
 
 
 const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
+  const modalContentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleTouchMove = (event: TouchEvent) => {
+      event.preventDefault();
+    };
+
+    const modalContentElement = modalContentRef.current;
+
+    if (modalContentElement) {
+      modalContentElement.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+      return () => {
+        modalContentElement.removeEventListener('touchmove', handleTouchMove);
+      };
+    }
+  }, []);
+
   let modalContent = null;
   
   if (slide.id === 1) {
     modalContent = (
-      <div className="modal-content-pf">
+      <div className="modal-content-pf" ref={modalContentRef}>
         <div className="modal-header mb-4">
           <h1 className="text-3xl mb-3">Dog Addict</h1>
             <div className="tags-container mb-9">
@@ -58,7 +77,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
       );
   } else if (slide.id === 2) {
     modalContent = (
-      <div className="modal-content-pf">
+      <div className="modal-content-pf" ref={modalContentRef}>
         <div className="modal-header mb-4">
           <h1 className="text-3xl mb-3">Ebook Forge</h1>
             <div className="tags-container mb-9">
@@ -83,7 +102,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
       );
     } else if (slide.id === 3) {
       modalContent = (
-        <div className="modal-content-pf">
+        <div className="modal-content-pf" ref={modalContentRef}>
           <div className="modal-header mb-4">
             <h1 className="text-3xl mb-3">CryptoBlob</h1>
               <div className="tags-container mb-9">
@@ -106,7 +125,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
         );
       } else if (slide.id === 4) {
         modalContent = (
-          <div className="modal-content-pf">
+          <div className="modal-content-pf" ref={modalContentRef}>
             <div className="modal-header mb-4">
               <h1 className="text-3xl mb-3">Rivaron</h1>
                 <div className="tags-container mb-9">
@@ -134,7 +153,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
           );
         } else if (slide.id === 5) {
           modalContent = (
-            <div className="modal-content-pf">
+            <div className="modal-content-pf" ref={modalContentRef}>
               <div className="modal-header mb-4">
                 <h1 className="text-3xl mb-3">Antharys</h1>
                   <div className="tags-container mb-9">
@@ -160,7 +179,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
             );
           } else if (slide.id === 6) {
             modalContent = (
-              <div className="modal-content-pf">
+              <div className="modal-content-pf" ref={modalContentRef}>
                 <div className="modal-header mb-4">
                   <h1 className="text-3xl mb-3">Destiny</h1>
                     <div className="tags-container mb-9">
@@ -174,7 +193,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
                       </p>
 
                 </div>
-                <div className="modal-body">
+                <div className="modal-body" ref={modalContentRef}>
                   <div className="horizontal-scroll-container">
                     <img src="6.1.jpg" alt="Image 1" />
                     <img src="6.2.jpg" alt="Image 2" />
@@ -186,7 +205,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
               );
             } else if (slide.id === 7) {
               modalContent = (
-                <div className="modal-content-pf">
+                <div className="modal-content-pf" ref={modalContentRef}>
                   <div className="modal-header mb-4">
                     <h1 className="text-3xl mb-3">No Intox</h1>
                       <div className="tags-container mb-9">
@@ -216,7 +235,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
                 );
               } else if (slide.id === 8) {
                 modalContent = (
-                  <div className="modal-content-pf">
+                  <div className="modal-content-pf" ref={modalContentRef}>
                     <div className="modal-header mb-4">
                       <h1 className="text-3xl mb-3">Faire-parterie</h1>
                         <div className="tags-container mb-9">
@@ -243,7 +262,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
                   );
                 } else if (slide.id === 9) {
                   modalContent = (
-                    <div className="modal-content-pf">
+                    <div className="modal-content-pf" ref={modalContentRef}>
                       <div className="modal-header mb-4">
                         <h1 className="text-3xl mb-3">Libbela</h1>
                           <div className="tags-container mb-9">
@@ -274,7 +293,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
                     );
                   } else if (slide.id === 10) {
                     modalContent = (
-                      <div className="modal-content-pf">
+                      <div className="modal-content-pf" ref={modalContentRef}>
                         <div className="modal-header mb-4">
                           <h1 className="text-3xl mb-3">Sooocute</h1>
                             <div className="tags-container mb-9">
@@ -299,7 +318,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
                       );
                     } else if (slide.id === 11) {
                       modalContent = (
-                        <div className="modal-content-pf">
+                        <div className="modal-content-pf" ref={modalContentRef}>
                           <div className="modal-header mb-4">
                             <h1 className="text-3xl mb-3">OVM</h1>
                               <div className="tags-container mb-9">
@@ -325,7 +344,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
                         );
                       } else if (slide.id === 12) {
                         modalContent = (
-                          <div className="modal-content-pf">
+                          <div className="modal-content-pf" ref={modalContentRef}>
                             <div className="modal-header mb-4">
                               <h1 className="text-3xl mb-3">Green Scan</h1>
                                 <div className="tags-container mb-9">
