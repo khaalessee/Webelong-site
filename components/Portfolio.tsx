@@ -382,6 +382,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
         >
           <div className="modal-wrapper flex flex-col items-center" style={{ marginTop: '60vh' }}>
             <div
+              ref={modalContentRef}
               id={`modal-slide-${slide.id}`}
               className="modal bg-gray-800 text-white rounded-lg p-6"
               onClick={(e) => e.stopPropagation()}
