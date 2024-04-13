@@ -362,7 +362,7 @@ const ModalSlide = ({ slide, closeModal }: ModalSlideProps) => {
         className="modal-overlay fixed top-0 left-0 w-full h-full flex justify-center items-start p-6 backdrop-filter backdrop-blur-lg overflow-y-auto"
         onClick={closeModal}
         >
-          <div className="modal-wrapper flex flex-col items-center" style={{ marginTop: '60vh' }}>
+          <div className="modal-wrapper flex flex-col items-center" style={{ marginTop: '40vh' }}>
             <div
               id={`modal-slide-${slide.id}`}
               className="modal bg-gray-800 text-white rounded-lg p-6"
